@@ -24,18 +24,31 @@ Features
 
 Step‑by‑step
 Step	Tool	                 Purpose
+
 1	   LongQC	            Assess raw read quality
+
 2	   Porechop_ABI	      Remove adapters (optional)
+
 3	    chopper	          Filter by length and quality
+
 4	    LongQC	          Assess filtered read quality
+
 5	    Flye	            Long-read assembly
+
 6	    Minimap2	        Align reads to draft assembly
+
 7	    Racon	            Draft assembly polishing (3 rounds)
+
 8	    Medaka	          Neural network polishing
+
 9	    QUAST	            Assembly quality metrics
+
 10	  BUSCO	            Genome completeness
+
 11	  Bakta	            Structural and functional annotation
+
 12	  MultiQC	          Aggregate all QC results
+
 13	  Custom	          Final HTML report + assembly stats + software versions
 
 
