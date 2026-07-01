@@ -1,0 +1,50 @@
+
+---
+
+## File: `.github/workflows/test.yml`
+
+```yaml
+name: Test Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          python-version: "3.11"
+          environment-file: environment.yml
+          activate-environment: ont-assembly
+
+      - name: Download test data
+        run: |
+          mkdir -p example_data
+          # Using a small, publicly available ONT test dataset
+          wget -q https://raw.githubusercontent.com/nanoporetech/ont-assembly-test/main/ecoli_test.fastq.gz -O example_data/ecoli.fastq.gz
+          echo "test data downloaded"
+
+      - name: Run pipeline
+        run: |
+          snakemake --cores 4 --printshellcmds --use-conda --rerun-incomplete
+
+      - name: Check outputs
+        run: |
+          test -f results/08_medaka/polished.fasta
+          test -f results/12_multiqc/multiqc_report.html
+          test -f results/report/final_report.html
+          test -f results/assembly_stats.tsv
+          echo "All expected outputs present"
