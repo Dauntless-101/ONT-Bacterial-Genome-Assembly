@@ -1,0 +1,19 @@
+Bootstrap: docker
+From: condaforge/mambaforge:latest
+
+%labels
+    Maintainer your-email@example.com
+    Version 0.1.0
+
+%files
+    environment.yml /tmp/environment.yml
+
+%post
+    conda env create -f /tmp/environment.yml
+    conda clean -afy
+
+%environment
+    export PATH=/opt/conda/envs/ont-assembly/bin:$PATH
+
+%runscript
+    exec snakemake "$@"

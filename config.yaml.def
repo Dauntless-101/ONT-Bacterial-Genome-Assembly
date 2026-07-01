@@ -1,0 +1,35 @@
+# ============================================================
+# ONT-Bacterial-Genome-Assembly Configuration
+# ============================================================
+
+# Sample name (used for output naming)
+sample: ecoli
+
+# Input reads
+reads:
+  fastq: example_data/ecoli.fastq.gz   # path to your ONT FASTQ (gzip or plain)
+
+# Assembly parameters
+assembly:
+  genome_size: 5m                      # estimated genome size (e.g., 5m, 2.8m, 10m)
+
+# Read filtering (chopper)
+filtering:
+  min_quality: 10                      # minimum average read quality
+  min_length: 1000                     # minimum read length in bp
+
+# Adapter trimming (optional)
+trimming:
+  enabled: false                       # set to true if reads still contain adapters
+  tool: porechop_abi                   # only 'porechop_abi' supported currently
+
+# Polishing
+polishing:
+  racon_rounds: 3
+  medaka_model: r1041_e82_400bps_sup_v5.0.0   # fallback model; auto-detection attempted first
+
+# Resource limits
+threads: 16
+
+# Output directory
+output: results

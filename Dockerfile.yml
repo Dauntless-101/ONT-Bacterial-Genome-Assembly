@@ -1,0 +1,19 @@
+FROM condaforge/mambaforge:latest
+
+LABEL maintainer="your-email@example.com"
+LABEL description="Docker image for ONT-Bacterial-Genome-Assembly pipeline"
+
+# Set working directory
+WORKDIR /data
+
+# Copy environment file and install
+COPY environment.yml /tmp/environment.yml
+RUN conda env create -f /tmp/environment.yml && \
+    conda clean -afy
+
+# Make the environment available by default
+RUN echo "source activate ont-assembly" > ~/.bashrc
+ENV PATH /opt/conda/envs/ont-assembly/bin:$PATH
+
+# Set default command
+CMD ["snakemake", "--help"]

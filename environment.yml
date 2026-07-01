@@ -1,0 +1,23 @@
+name: ont-assembly
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - snakemake=8.20.0
+  - python=3.11
+  - longqc=1.2.3
+  - chopper=0.9.0
+  - flye=2.10
+  - minimap2=2.28
+  - racon=1.5.0
+  - medaka=2.1.0
+  - quast=5.3.0
+  - busco=5.7.1
+  - bakta=1.10.0
+  - multiqc=1.25
+  - samtools=1.20
+  - porechop_abi=0.5.0        # optional if trimming enabled
+  - pip
+  - pip:
+    - snakemake[reports]       # enables Snakemake report functionality
