@@ -243,7 +243,7 @@ Citation
 If you use this pipeline in your research, please cite:
 
 ONT-Bacterial-Genome-Assembly: A reproducible Snakemake workflow for ONT bacterial genome assembly and annotation.
-Zenodo. DOI: 10.5281/zenodo.XXXXXX
+Zenodo. DOI: https://doi.org/10.5281/zenodo.21102519)
 
 We also strongly encourage citing the core tools employed (Flye, Medaka, Bakta, etc.). The automatically generated software_versions.yml lists every tool and version to simplify your methods section.
 
