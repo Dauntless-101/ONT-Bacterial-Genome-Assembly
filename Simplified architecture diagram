@@ -1,0 +1,13 @@
+FASTQ
+   ↓
+QC
+   ↓
+Filtering
+   ↓
+Assembly
+   ↓
+Polishing
+   ↓
+Assembly QC
+   ↓
+Annotation
