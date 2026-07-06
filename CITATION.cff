@@ -3,9 +3,9 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: "Akerzoul"
     given-names: "Taha"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+    orcid: "https://orcid.org/0009-0008-0613-4401"
 title: "ONT-Bacterial-Genome-Assembly: A reproducible Snakemake workflow for ONT bacterial genome assembly and annotation"
 version: 1.0
-doi: 
+
 date-released: 02-07-2026
 url: "https://github.com/Dauntless-101/ONT-Bacterial-Genome-Assembly"
