@@ -6,6 +6,6 @@ authors:
     orcid: "https://orcid.org/0009-0008-0613-4401"
 title: "ONT-Bacterial-Genome-Assembly: A reproducible Snakemake workflow for ONT bacterial genome assembly and annotation"
 version: 1.0
-
+doi: "https://doi.org/10.5281/zenodo.21102519"
 date-released: 02-07-2026
 url: "https://github.com/Dauntless-101/ONT-Bacterial-Genome-Assembly"
