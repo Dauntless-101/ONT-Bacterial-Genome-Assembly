@@ -8,7 +8,7 @@
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com)
 [![Apptainer](https://img.shields.io/badge/apptainer-ready-blue.svg)](https://apptainer.org)
 [![License](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
-[![DOI](https://doi.org/10.5281/zenodo.21102519)
+[![DOI](https://zenodo.org/badge/1285172821.svg)](https://doi.org/10.5281/zenodo.21102519)
 [![CI](https://github.com/Dauntless-101/ONT-Bacterial-Genome-Assembly/actions/workflows/test.yml/badge.svg)](https://github.com/Dauntless-101/ONT-Bacterial-Genome-Assembly/actions)
 
 **A reproducible Snakemake workflow for assembling, polishing, evaluating, and annotating bacterial genomes from Oxford Nanopore sequencing reads.**
